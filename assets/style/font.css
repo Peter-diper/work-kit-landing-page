@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "france";
+  src: url(../fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: "mono";
+  src: url(../fonts/manrope/static/Manrope-Regular.ttf);
+  font-weight: 400;
+}

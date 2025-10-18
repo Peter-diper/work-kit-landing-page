@@ -1,0 +1,207 @@
+:root {
+  --color-green: #44ffa1;
+  --color-Purple-900: #24053e;
+  --color-Purple-500: #584d62;
+  --color-Purple-100: #fcf8ff;
+  --color-white: #fff;
+
+  --fs-pr1: 8rem;
+  --fs-pr2: 5.6rem;
+  --fs-pr3: 3.2rem;
+  --fs-pr4: 1.8rem;
+  --fs-pr5: 1.8rem;
+
+  --f-france: "france";
+  --f-manrope: "mono";
+
+  --space-100: 0.8rem;
+  --space-150: 1.2rem;
+  --space-200: 1.6rem;
+  --space-250: 2rem;
+  --space-350: 2.8rem;
+  --space-400: 3.2rem;
+  --space-500: 4rem;
+  --space-550: 4.4rem;
+  --space-700: 5.6rem;
+  --space-800: 6.4rem;
+  --space-1000: 8rem;
+  --space-1100: 8.8rem;
+  --space-1400: 11.2rem;
+  --space-1600: 12.8rem;
+  --space-1800: 14.4rem;
+  --space-2100: 16.8rem;
+  --space-3700: 29.6rem;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--f-france), serif;
+}
+
+/* logo */
+.logo--dark,
+.logo--light {
+  max-width: 9.5rem;
+}
+
+/* btn */
+.btn {
+  border: 0;
+  outline: 0;
+  padding: calc(var(--space-150) - 0.2rem) calc(var(--space-400) - 0.2rem);
+  font-family: var(--f-manrope);
+  cursor: pointer;
+  font-size: var(--fs-pr5);
+  font-weight: 700;
+  transition: all 0.2s;
+  border: 2px solid var(--color-green);
+  line-height: 1.8;
+}
+
+.btn--secondery {
+  border: none;
+  border-bottom: 2px solid var(--color-green);
+  background-color: transparent;
+  padding: 0.2rem 0.2rem;
+  transition: all 0.4s;
+  color: var(--color-white);
+}
+.btn--secondery:hover {
+  color: var(--color-green);
+}
+
+.btn--primery {
+  background-color: var(--color-green);
+  color: var(--color-Purple-900);
+}
+
+.btn--primery:hover {
+  color: var(--color-green);
+  background-color: transparent;
+}
+
+/* icon */
+.icon {
+  width: 100%;
+  max-width: var(--space-250);
+  max-height: var(--space-250);
+}
+
+.icon:hover {
+  fill: #24053e;
+}
+
+/* navbar */
+.list--items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 clamp(var(--space-250), 5vw, var(--space-2100));
+  padding-top: clamp(var(--space-400), 6vw, var(--space-800));
+}
+
+@media screen and (min-width: 64rem) {
+  .list--items {
+    padding: 0 clamp(var(--space-250), 10vw, var(--space-2100));
+    padding-top: clamp(var(--space-400), 6vw, var(--space-800));
+  }
+}
+
+/* haero--section */
+.hero--section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.hero--header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-500);
+  padding-top: var(--space-700);
+  text-align: center;
+}
+.hero--title {
+  color: var(--color-white);
+  font-size: clamp(
+    calc(var(--fs-pr1) - 3rem),
+    5.5vw,
+    calc(var(--fs-pr1) - 0.1rem)
+  );
+  line-height: 1.1;
+  font-variation-settings: 100;
+  font-weight: 600;
+  padding: 0 3rem;
+  max-width: 60rem;
+}
+.hero--title span {
+  border-bottom: solid 3px var(--color-green);
+}
+.hero--img {
+  justify-self: center;
+  margin-top: clamp(var(--space-400), 6vw, var(--space-1100));
+  padding: 0 var(--space-350);
+  max-width: 70rem;
+  padding: clamp(3rem, 4vh, 10rem);
+}
+.hero--footer {
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (min-width: 48rem) {
+  .hero--title {
+    padding: 0 4rem;
+  }
+}
+@media screen and (min-width: 64rem) {
+  .hero--title {
+    padding: 0 4rem;
+  }
+}
+
+@media screen and (min-width: 90rem) {
+  .hero--img {
+    max-width: 76rem;
+  }
+}
+
+/* background */
+
+.dark--background {
+  background-color: #24053e;
+}
+
+.section--curve {
+  height: 100rem;
+  clip-path: ellipse(180vw 90% at top);
+  position: absolute;
+  width: 100vw;
+  top: -40rem;
+  z-index: -1;
+}
+
+header {
+}
+
+@media screen and (min-width: 48rem) {
+  .section--curve {
+    position: absolute;
+    height: 100rem;
+    clip-path: ellipse(160vw 100% at top);
+    width: 100vw;
+    top: -30rem;
+    z-index: -1;
+  }
+  header {
+    background: url(../images/bg-pattern-1.svg), url(../images/bg-pattern-2.svg);
+    background-repeat: no-repeat;
+    background-position: left -5rem top 20rem, right -5rem top 50rem;
+    background-size: 24rem, 16rem;
+  }
+}
