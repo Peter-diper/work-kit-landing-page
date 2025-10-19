@@ -155,7 +155,7 @@ body {
   padding: 0 var(--space-350);
   max-width: 70rem;
 }
-.hero--footer {
+.hero--img {
   position: relative;
   width: 100%;
 }
@@ -194,7 +194,6 @@ body {
   transition: all 100ms;
 }
 header {
-  transition: all 100ms;
 }
 
 @media screen and (min-width: 48rem) {
@@ -235,14 +234,18 @@ header {
 /* content */
 .content {
   position: relative;
+}
+.content--wrapper {
+  position: absolute;
   background-color: var(--color-Purple-100);
   padding-top: 35rem;
-  padding-bottom: 20rem;
+  padding-bottom: 12rem;
   top: -30rem;
-  clip-path: ellipse(180vw 90% at top);
-
+  clip-path: ellipse(180vw 93% at top);
   z-index: -2;
+  width: 100%;
 }
+
 .content--block {
   justify-self: center;
   display: flex;
