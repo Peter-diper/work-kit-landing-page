@@ -40,6 +40,7 @@ html {
 body {
   min-height: 100vh;
   font-family: var(--f-france), serif;
+  background-color: #44ffa1;
 }
 
 /* logo */
@@ -57,7 +58,7 @@ body {
   cursor: pointer;
   font-size: var(--fs-pr5);
   font-weight: 700;
-  transition: all 0.2s;
+  transition: all 0.3s ease-out;
   border: 2px solid var(--color-green);
   line-height: 1.8;
 }
@@ -67,7 +68,7 @@ body {
   border-bottom: 2px solid var(--color-green);
   background-color: transparent;
   padding: 0.2rem 0.2rem;
-  transition: all 0.4s;
+  transition: all 0.4s ease-out;
   color: var(--color-white);
 }
 .btn--secondery:hover {
@@ -102,6 +103,7 @@ body {
   align-items: center;
   padding: 0 clamp(var(--space-250), 5vw, var(--space-2100));
   padding-top: clamp(var(--space-400), 6vw, var(--space-800));
+  transition: all 200ms;
 }
 
 @media screen and (min-width: 64rem) {
@@ -117,6 +119,7 @@ body {
   flex-direction: column;
   align-items: center;
   position: relative;
+  transition: all 200ms;
 }
 .hero--header {
   display: flex;
@@ -125,6 +128,7 @@ body {
   gap: var(--space-500);
   padding-top: var(--space-700);
   text-align: center;
+  transition: all 200ms;
 }
 .hero--title {
   color: var(--color-white);
@@ -147,7 +151,6 @@ body {
   margin-top: clamp(var(--space-400), 6vw, var(--space-1100));
   padding: 0 var(--space-350);
   max-width: 70rem;
-  padding: clamp(3rem, 4vh, 10rem);
 }
 .hero--footer {
   position: relative;
@@ -178,30 +181,50 @@ body {
 }
 
 .section--curve {
-  height: 100rem;
+  height: clamp(90rem, 90vw, 120rem);
   clip-path: ellipse(180vw 90% at top);
   position: absolute;
-  width: 100vw;
+  width: 100%;
+  padding-bottom: 40rem;
   top: -40rem;
   z-index: -1;
+  transition: all 100ms;
 }
-
 header {
+  transition: all 100ms;
 }
 
 @media screen and (min-width: 48rem) {
   .section--curve {
+    height: clamp(100rem, 90vw, 120rem);
+    clip-path: ellipse(180vw 90% at top);
     position: absolute;
-    height: 100rem;
-    clip-path: ellipse(160vw 100% at top);
-    width: 100vw;
-    top: -30rem;
+    width: 100%;
+    padding-bottom: 40rem;
+    top: -40rem;
     z-index: -1;
   }
   header {
     background: url(../images/bg-pattern-1.svg), url(../images/bg-pattern-2.svg);
     background-repeat: no-repeat;
-    background-position: left -5rem top 20rem, right -5rem top 50rem;
+    background-position: right calc(135% - 10rem) top 20%, right -5rem top 50%;
+    background-size: 24rem, 16rem;
+  }
+}
+@media screen and (min-width: 64rem) {
+  .section--curve {
+    height: clamp(109rem, 90vw, 120rem);
+    clip-path: ellipse(180vw 90% at top);
+    position: absolute;
+    width: 100%;
+    padding-bottom: 40rem;
+    top: -40rem;
+    z-index: -1;
+  }
+  header {
+    background: url(../images/bg-pattern-1.svg), url(../images/bg-pattern-2.svg);
+    background-repeat: no-repeat;
+    background-position: right 104% top 20%, right -5rem top 50%;
     background-size: 24rem, 16rem;
   }
 }
