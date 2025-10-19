@@ -31,16 +31,19 @@
   --space-1800: 14.4rem;
   --space-2100: 16.8rem;
   --space-3700: 29.6rem;
-}
 
+  --transition--400-ms: all 0.3s ease-in-out;
+}
+* {
+  transition: var(--transition--400-ms);
+}
 html {
   font-size: 62.5%;
 }
 
 body {
-  min-height: 100vh;
   font-family: var(--f-france), serif;
-  background-color: #44ffa1;
+  background-color: var(--color-white);
 }
 
 /* logo */
@@ -87,9 +90,9 @@ body {
 
 /* icon */
 .icon {
-  width: 100%;
-  max-width: var(--space-250);
-  max-height: var(--space-250);
+  text-decoration: none;
+  width: var(--space-250);
+  height: var(--space-250);
 }
 
 .icon:hover {
@@ -226,5 +229,88 @@ header {
     background-repeat: no-repeat;
     background-position: right 104% top 20%, right -5rem top 50%;
     background-size: 24rem, 16rem;
+  }
+}
+
+/* content */
+.content {
+  position: relative;
+  background-color: var(--color-Purple-100);
+  padding-top: 35rem;
+  padding-bottom: 20rem;
+  top: -30rem;
+  clip-path: ellipse(180vw 90% at top);
+
+  z-index: -2;
+}
+.content--block {
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(var(--space-350), 9vw, var(--space-700));
+  transition: all 0.4s ease-in-out;
+}
+.circle--icon {
+  padding: calc(var(--space-100) - 0.23rem) calc(var(--space-350) - 1.07rem);
+  border: 1px solid var(--color-Purple-500);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(var(--fs-pr3) - 0.46rem);
+  color: var(--color-Purple-900);
+  max-width: 4.6rem;
+  max-height: 4.6rem;
+}
+.block--footer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-200);
+  max-width: 33rem;
+}
+.block--title {
+  font-size: clamp(calc(var(--fs-pr3) - 0.8rem), 3.826vw, var(--fs-pr3));
+  transition: all 0.4s ease-in-out;
+}
+.block--desc {
+  font-family: var(--f-manrope), serif;
+  font-size: clamp(calc(var(--fs-pr4) - 0.2rem), 2vw, calc(var(--fs-pr4)));
+  line-height: 1.8;
+}
+.content--wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-400);
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 48rem) {
+  .content--block {
+    flex-direction: row;
+    padding: 0 var(--space-350);
+  }
+  .block--footer {
+    gap: var(--space-200);
+    max-width: 57.6rem;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 64rem) {
+  .block--footer {
+    gap: var(--space-200);
+    max-width: 35.2rem;
+    text-align: center;
+  }
+
+  .content--block {
+    flex-direction: column;
+  }
+  .content--wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-400);
   }
 }
