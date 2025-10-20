@@ -90,13 +90,38 @@ body {
 
 /* icon */
 .icon {
+  display: block;
   text-decoration: none;
   width: var(--space-250);
-  height: var(--space-250);
+  height: var(--space-350);
+  background-position: center;
+  transition: all 50ms;
 }
 
-.icon:hover {
-  fill: #24053e;
+.icon--intagram {
+  background: url(../images/icon-instagram.svg);
+  background-repeat: no-repeat;
+}
+.icon--facebook {
+  background: url(../images/icon-facebook.svg);
+  background-repeat: no-repeat;
+}
+.icon--twitter {
+  background: url(../images/icon-twitter.svg);
+  background-repeat: no-repeat;
+}
+
+.icon--intagram:hover {
+  background: url(../images/socmed-instagram.svg);
+  background-repeat: no-repeat;
+}
+.icon--facebook:hover {
+  background: url(../images/socmed-facebook.svg);
+  background-repeat: no-repeat;
+}
+.icon--twitter:hover {
+  background: url(../images/socmed-twitter.svg);
+  background-repeat: no-repeat;
 }
 
 /* navbar */
@@ -413,4 +438,18 @@ body {
 /* cta btn */
 .cta .btn {
   padding: 1rem 3.4rem;
+}
+
+/* footer */
+.footer--social {
+  display: flex;
+  align-items: center;
+  gap: var(--space-350);
+}
+.footer--block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-700);
+  padding: clamp(var(--space-1000), 10vw, var(--space-1400));
 }
