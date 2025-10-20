@@ -193,8 +193,6 @@ body {
   z-index: -1;
   transition: all 100ms;
 }
-header {
-}
 
 @media screen and (min-width: 48rem) {
   .section--curve {
@@ -316,4 +314,103 @@ header {
     flex-direction: row;
     gap: var(--space-400);
   }
+}
+
+/* cta */
+.cta {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2.2rem;
+}
+.founder--img {
+  position: relative;
+  top: 5rem;
+  width: 100%;
+  max-width: 26.4rem;
+}
+.cta--block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(var(--space-400), 6.29vw, var(--space-800));
+  text-align: center;
+  gap: var(--space-400);
+  color: var(--color-white);
+  background-color: var(--color-Purple-900);
+  /* background-image: url(../images/bg-pattern-3.svg);
+  background-repeat: no-repeat;
+  background-position: bottom; */
+}
+.founder--motion {
+  font-size: clamp(
+    calc(var(--fs-pr2) - 2.4rem),
+    calc(6vw - 1rem),
+    var(--fs-pr2)
+  );
+  /* font-size: clamp(calc(var(--fs-pr2) - 2.4rem), 6vw, var(--fs-pr2)); */
+}
+.founder--motion__discription {
+  font-family: var(--f-manrope), serif;
+  font-size: clamp(calc(var(--fs-pr4) - 0.2rem), 1vw, calc(var(--fs-pr4)));
+  max-width: 27.1rem;
+}
+.ctr--img--patern {
+  display: none;
+}
+@media screen and (min-width: 48rem) {
+  .cta--block {
+    inset: 0 10rem 10rem 9rem;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .founder--motion__discription {
+    max-width: 40.8rem;
+  }
+  .founder--img {
+    top: 10rem;
+    right: 20rem;
+  }
+  .ctr--img--patern {
+    position: absolute;
+    display: block;
+    max-width: 17.8rem;
+    bottom: -7.8rem;
+    right: 2%;
+    z-index: 10;
+  }
+}
+@media screen and (min-width: 64rem) {
+  .cta--block {
+    inset: 0 10rem 10rem 9rem;
+  }
+  .founder--motion__discription {
+    max-width: 60.2rem;
+  }
+  .founder--img {
+    transform: scale(1.2);
+    top: 11rem;
+  }
+  .ctr--img--patern {
+    right: 8%;
+  }
+}
+@media screen and (min-width: 90rem) {
+  .cta--block {
+    inset: 0 10rem 10rem 19rem;
+  }
+  .founder--img {
+    transform: scale(1.71);
+    top: 15rem;
+    right: 30rem;
+  }
+  .ctr--img--patern {
+    right: 12%;
+  }
+}
+/* cta btn */
+.cta .btn {
+  padding: 1rem 3.4rem;
 }
