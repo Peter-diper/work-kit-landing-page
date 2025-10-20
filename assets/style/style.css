@@ -258,15 +258,25 @@ body {
 .content {
   position: relative;
 }
-.content--wrapper {
+.custom--back--ground {
   position: absolute;
+  height: 90rem;
   background-color: var(--color-Purple-100);
-  padding-top: 35rem;
-  padding-bottom: 12rem;
-  top: -30rem;
-  clip-path: ellipse(180vw 93% at top);
+  z-index: -2;
+  top: -70rem;
+  width: 100%;
+}
+.content--wrapper {
+  position: relative;
+  background-color: var(--color-Purple-100);
+
   z-index: -2;
   width: 100%;
+}
+.custom--shape {
+  background-color: var(--color-Purple-100);
+  padding-bottom: 12rem;
+  clip-path: ellipse(90vw 93% at top);
 }
 
 .content--block {
@@ -347,7 +357,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 2.2rem;
 }
 .founder--img {
   position: relative;
@@ -365,9 +374,6 @@ body {
   gap: var(--space-400);
   color: var(--color-white);
   background-color: var(--color-Purple-900);
-  /* background-image: url(../images/bg-pattern-3.svg);
-  background-repeat: no-repeat;
-  background-position: bottom; */
 }
 .founder--motion {
   font-size: clamp(
